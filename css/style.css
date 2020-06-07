@@ -44,9 +44,11 @@
         border-radius: 100em;
         border: 1px black dashed;
         margin-right: 10px; }
+      .aside-bar ul li .menu {
+        filter: drop-shadow(30px 0px 20px red) invert(1); }
   .aside-bar .watermill {
     color: white;
-    font-size: 1.2em;
+    font-size: 1.5em;
     display: inline-block;
     margin-bottom: 40px;
     font-family: 'Charmonman', cursive; }
@@ -55,7 +57,7 @@
   background: linear-gradient(#303F9F, #5C6BC0);
   color: white;
   width: 100%; }
-  .main header a {
+  .main header .panier {
     position: fixed;
     right: 0;
     border-bottom: 1px solid white;
@@ -65,23 +67,41 @@
     width: 100px;
     height: 70px;
     opacity: 0.6; }
-    .main header a img {
+    .main header .panier img {
       width: 50px;
       filter: invert(1);
       right: 10px;
       position: fixed; }
-    .main header a p {
+    .main header .panier p {
       text-align: center;
       color: white;
       font-family: 'Bellota', cursive;
       font-size: 1.2em;
       padding-top: 20px;
       padding-left: 30px; }
+  .main header .serveur {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 100% 0% 0% 100%/100% 0% 100% 0%;
+    background-color: #1A237E;
+    width: 100px;
+    height: 70px;
+    opacity: 0.6; }
+    .main header .serveur p {
+      text-align: center;
+      color: white;
+      font-family: 'Bellota', cursive;
+      font-size: 1.2em;
+      padding-top: 30px;
+      padding-left: 10px; }
   .main .title-btn {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 0px; }
+    width: 80%; }
     .main .title-btn h2 {
       font-size: 4em;
       font-family: 'Charmonman', cursive; }
@@ -91,13 +111,6 @@
       border: black 1px solid;
       padding: 5px;
       border-radius: 10em; }
-    .main .title-btn .serveur {
-      font-family: 'Bellota', cursive;
-      color: white;
-      font-size: 1.2em;
-      border: 1px solid white;
-      border-radius: 10px 10px;
-      padding: 5px 10px 5px 10px; }
   .main .choix {
     display: flex;
     margin-left: 40px; }
@@ -137,5 +150,13 @@
         height: 30px;
         background-color: red;
         border-radius: 5px 0 10px 0; }
+      .main .menu article .definition {
+        display: none;
+        width: 100%;
+        height: 100%; }
+      .main .menu article :target {
+        display: block; }
+        .main .menu article :target article {
+          height: 500px; }
 
 /*# sourceMappingURL=style.css.map */
