@@ -1,0 +1,200 @@
+@mixin charmonman-reg {
+    font-family: 'Charmonman', cursive;
+}
+@mixin belota {
+    font-family: 'Bellota', cursive;
+}
+
+$blue900 : #1A237E;
+$blue800 : #283593;
+$blue700 : #303F9F;
+$blue600 : #3949AB;
+$blue500 : #3F51B5;
+$blue400 : #5C6BC0;
+
+
+*{
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+    
+}
+
+#page{
+    display: flex;
+}
+.aside-bar{
+    text-align: center;
+    @include belota();
+    width: 25%;
+    height: auto;
+    background: linear-gradient($blue900, $blue500);
+    color: white;
+    img{
+        width: 150px;
+    }
+    h1{
+        font-size: 1.8em;
+        margin-top: 30px;
+        @include charmonman-reg();
+        text-shadow: 0 3px $blue400;
+    }
+    ul{
+        padding: 0;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        text-align: left;
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        li{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            
+            
+            a{
+                color: white;
+                font-size: 1.2em;
+                display: flex;
+                align-items: center;
+                
+                
+            }
+            .menu, .starter, .plat, .dessert, .boisson{
+                width: 40px;
+                padding: 5px;
+                filter: invert(1);
+                border-radius: 100em;
+                border: 1px black dashed;
+                margin-right: 10px;
+                
+            }
+        }
+    }
+    .watermill{
+        color: white;
+        font-size: 1.2em;
+        display: inline-block;
+        margin-bottom: 40px;
+        @include charmonman-reg();
+        
+        
+    }
+}
+.main{
+    background: linear-gradient($blue700, $blue400);
+    color: white;
+    width: 100%;
+
+    header{
+        
+        a{
+            position: fixed;
+            right: 0;
+            border-bottom: 1px solid white;
+            border-left: 1px solid white;
+            border-radius: 0% 80% 0% 100% / 0% 0% 100% 100% ;
+            background-color: $blue900;
+            width: 100px;
+            height: 70px;
+            opacity: 0.6;
+            img{
+                width: 50px;
+                filter: invert(1);
+                right: 10px;
+                position: fixed;  
+            }
+            p{
+            text-align: center;
+            color: white;
+            @include belota();
+            font-size: 1.2em;
+            padding-top: 20px;
+            padding-left: 30px;
+            }
+        }
+    }
+
+    .title-btn{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 0px;
+        h2{
+            font-size: 4em;
+            @include charmonman-reg();
+            
+            
+        }
+        .retour{
+            img{
+                width: 30px;
+                filter: invert(1);
+                border: black 1px solid;
+                padding : 5px;
+                border-radius: 10em;
+            }
+            
+        }
+        .serveur{
+            @include belota();
+            color: white;
+            font-size: 1.2em;
+            border: 1px solid white;
+            border-radius: 10px 10px ;
+            padding: 5px 10px 5px 10px;
+        }
+    }
+    .choix{
+        display: flex;
+        margin-left: 40px;
+        .txt{
+        @include belota();
+        color: white;
+        font-size: 1.4em;
+        width: 40%;
+        text-align: center;
+        }
+        .border{
+            border-bottom: white 1px solid;
+            width: 50%;
+            margin-bottom: 10px;
+            opacity: 0.3;
+        }
+    }
+    .menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 88%;
+        margin-left: 40px;
+        margin-top: 50px;
+        
+        article{
+            @include belota();
+            color: white;
+            border: 1px solid white;
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px $blue900;
+            img{
+                width: 250px;
+                border-radius: 0% 80% 0% 100% / 84% 0% 100% 22% ;
+            }
+            .prix{
+                position: absolute;
+                width: 60px;
+                height: 30px;
+                background-color: red;
+                border-radius: 5px 0 10px 0;
+            }
+        }
+    }
+    
+    
+    
+}
+
