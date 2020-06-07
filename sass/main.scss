@@ -64,20 +64,23 @@ $blue400 : #5C6BC0;
             .menu, .starter, .plat, .dessert, .boisson{
                 width: 40px;
                 padding: 5px;
-                filter: invert(1);
+                filter:invert(1);
                 border-radius: 100em;
                 border: 1px black dashed;
                 margin-right: 10px;
-                
-            }
+                }
+                .menu{
+                    filter: drop-shadow(30px 0px 20px red)invert(1);
+                }
         }
     }
     .watermill{
         color: white;
-        font-size: 1.2em;
+        font-size: 1.5em;
         display: inline-block;
         margin-bottom: 40px;
         @include charmonman-reg();
+        
         
         
     }
@@ -89,7 +92,7 @@ $blue400 : #5C6BC0;
 
     header{
         
-        a{
+        .panier{
             position: fixed;
             right: 0;
             border-bottom: 1px solid white;
@@ -114,13 +117,33 @@ $blue400 : #5C6BC0;
             padding-left: 30px;
             }
         }
+        .serveur{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            border-top: 1px solid white;
+            border-left: 1px solid white;
+            border-radius: 100% 0% 0% 100% / 100% 0% 100% 0%  ;
+            background-color: $blue900;
+            width: 100px;
+            height: 70px;
+            opacity: 0.6;
+            p{
+            text-align: center;
+            color: white;
+            @include belota();
+            font-size: 1.2em;
+            padding-top: 30px;
+            padding-left: 10px;
+            }
+        }
     }
 
     .title-btn{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        margin-top: 0px;
+        width: 80%;
         h2{
             font-size: 4em;
             @include charmonman-reg();
@@ -137,14 +160,7 @@ $blue400 : #5C6BC0;
             }
             
         }
-        .serveur{
-            @include belota();
-            color: white;
-            font-size: 1.2em;
-            border: 1px solid white;
-            border-radius: 10px 10px ;
-            padding: 5px 10px 5px 10px;
-        }
+        
     }
     .choix{
         display: flex;
@@ -180,6 +196,8 @@ $blue400 : #5C6BC0;
             text-align: center;
             border-radius: 5px;
             box-shadow: 0 0 10px $blue900;
+            
+            
             img{
                 width: 250px;
                 border-radius: 0% 80% 0% 100% / 84% 0% 100% 22% ;
@@ -191,10 +209,20 @@ $blue400 : #5C6BC0;
                 background-color: red;
                 border-radius: 5px 0 10px 0;
             }
-        }
+            .definition{
+                display: none;
+                
+                width: 100%;
+                height: 100%;
+                
+            }
+            :target{
+                    display: block;
+                    article{
+                        height: 500px;
+                    }
+                }
+            
     }
-    
-    
-    
 }
-
+}
